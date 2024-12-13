@@ -82,49 +82,49 @@ class GF_Offload_File_Uploads extends GFAddOn {
 	public function plugin_settings_fields() {
 		return [
 			[
-				'title'  => esc_html__('Amazon S3 Settings', 'vital'),
+				'title'  => esc_html__('Amazon S3 Settings', 'incon'),
 				'fields' => [
 					[
 						'name'  => 'awsaccesskey',
-						'label' => esc_html__('AWS Access Key', 'vital'),
+						'label' => esc_html__('AWS Access Key', 'incon'),
 						'type'  => 'text',
 						'class' => 'medium',
 					],
 					[
 						'name'  => 'awssecretkey',
-						'label' => esc_html__('AWS Secret Key', 'vital'),
+						'label' => esc_html__('AWS Secret Key', 'incon'),
 						'type'  => 'text',
 						'class' => 'medium',
 					],
 					[
 						'name'  => 's3bucketname',
-						'label' => esc_html__('S3 Bucket Name', 'vital'),
+						'label' => esc_html__('S3 Bucket Name', 'incon'),
 						'type'  => 'text',
 						'class' => 'medium',
 					],
 					[
 						'name'    => 's3bucketpath',
-						'label'   => esc_html__('S3 Bucket Folder', 'vital'),
+						'label'   => esc_html__('S3 Bucket Folder', 'incon'),
 						'type'    => 'text',
 						'class'   => 'medium',
-						'tooltip' => esc_html__('Full folder path within your bucket. Do not use a leading slash.', 'vital'),
+						'tooltip' => esc_html__('Full folder path within your bucket. Do not use a leading slash.', 'incon'),
 					],
 					[
 						'name'          => 's3filepermissions',
-						'label'         => esc_html__('S3 File Permissions', 'vital'),
+						'label'         => esc_html__('S3 File Permissions', 'incon'),
 						'type'          => 'select',
-						'tooltip'       => esc_html__('Make sure your user/bucket permissions are correctly configured in AWS so that they work with your selected option. If your uploads are failing, this setting may be why.', 'vital'),
+						'tooltip'       => esc_html__('Make sure your user/bucket permissions are correctly configured in AWS so that they work with your selected option. If your uploads are failing, this setting may be why.', 'incon'),
 						'choices'       => [
 							[
-								'label' => esc_html__('Public Read', 'vital'),
+								'label' => esc_html__('Public Read', 'incon'),
 								'value' => 'public-read',
 							],
 							[
-								'label' => esc_html__('Private', 'vital'),
+								'label' => esc_html__('Private', 'incon'),
 								'value' => 'private',
 							],
 							[
-								'label' => esc_html__('Authenticated Read', 'vital'),
+								'label' => esc_html__('Authenticated Read', 'incon'),
 								'value' => 'authenticated-read',
 							],
 						],
@@ -137,26 +137,26 @@ class GF_Offload_File_Uploads extends GFAddOn {
 				'fields' => [
 					[
 						'name'        => 'ftphost',
-						'label'       => esc_html__('FTP Hostname', 'vital'),
+						'label'       => esc_html__('FTP Hostname', 'incon'),
 						'type'        => 'text',
 						'class'       => 'medium',
 						'placeholder' => 'ftp.example.com',
 					],
 					[
 						'name'    => 'ftpport',
-						'label'   => esc_html__('FTP Port Number', 'vital'),
+						'label'   => esc_html__('FTP Port Number', 'incon'),
 						'type'    => 'text',
 						'class'   => 'medium',
-						'tooltip' => esc_html__('Set custom FTP port. Defaults to port 21 for FTP and port 22 for SFTP if not set.', 'vital'),
+						'tooltip' => esc_html__('Set custom FTP port. Defaults to port 21 for FTP and port 22 for SFTP if not set.', 'incon'),
 					],
 					[
 						'name'  => 'ftpconnection',
-						'label' => esc_html__('FTP Connection Type', 'vital'),
+						'label' => esc_html__('FTP Connection Type', 'incon'),
 						'type'  => 'select',
 						'class' => 'medium',
 						'choices'       => [
 							[
-								'label' => esc_html__('FTP with Explicit TLS', 'vital'),
+								'label' => esc_html__('FTP with Explicit TLS', 'incon'),
 								'value' => 'ftp-tls',
 							],
 						],
@@ -164,31 +164,31 @@ class GF_Offload_File_Uploads extends GFAddOn {
 					],
 					[
 						'name'  => 'ftpuser',
-						'label' => esc_html__('FTP Username', 'vital'),
+						'label' => esc_html__('FTP Username', 'incon'),
 						'type'  => 'text',
 						'class' => 'medium',
 					],
 					[
 						'name'  => 'ftppassword',
-						'label' => esc_html__('FTP Password', 'vital'),
+						'label' => esc_html__('FTP Password', 'incon'),
 						'type'  => 'text',
 						'class' => 'medium',
 					],
 					[
 						'name'        => 'ftppath',
-						'label'       => esc_html__('FTP Remote Path', 'vital'),
+						'label'       => esc_html__('FTP Remote Path', 'incon'),
 						'type'        => 'text',
 						'class'       => 'medium',
 						'placeholder' => '/example',
-						'tooltip'     => esc_html__('Absolute folder path on FTP server where the files should be uploaded.', 'vital'),
+						'tooltip'     => esc_html__('Absolute folder path on FTP server where the files should be uploaded.', 'incon'),
 					],
 					[
 						'name'        => 'ftpurl',
-						'label'       => esc_html__('FTP Root URL', 'vital'),
+						'label'       => esc_html__('FTP Root URL', 'incon'),
 						'type'        => 'text',
 						'class'       => 'medium',
 						'placeholder' => 'https://example.com',
-						'tooltip'     => esc_html__('Root URL where FTP remote path is accessible. Used to generate download links in form entries. Be sure to include http:// or https://.', 'vital'),
+						'tooltip'     => esc_html__('Root URL where FTP remote path is accessible. Used to generate download links in form entries. Be sure to include http:// or https://.', 'incon'),
 					],
 				],
 			],
@@ -214,9 +214,9 @@ class GF_Offload_File_Uploads extends GFAddOn {
 					<input class="offload-file-uploads-checkbox" name="offloads3_setting" type="checkbox" id="offloads3_setting" onclick="SetFieldProperty(\'offloadS3\', this.checked);">
 					<label for="offloads3_setting" class="inline">%3$s</label>
 				</li>',
-				esc_html__('Offload files to Amazon S3', 'vital'),
-				esc_html__('Enable this option to offload uploaded files in this field to Amazon S3. Local copies of files will be deleted after successful transfer', 'vital'),
-				esc_html__('Enable', 'vital')
+				esc_html__('Offload files to Amazon S3', 'incon'),
+				esc_html__('Enable this option to offload uploaded files in this field to Amazon S3. Local copies of files will be deleted after successful transfer', 'incon'),
+				esc_html__('Enable', 'incon')
 			);
 
 			printf(
@@ -228,9 +228,9 @@ class GF_Offload_File_Uploads extends GFAddOn {
 					<input class="offload-file-uploads-checkbox" name="offloadftp_setting" type="checkbox" id="offloadftp_setting" onclick="SetFieldProperty(\'offloadFtp\', this.checked);">
 					<label for="offloadftp_setting" class="inline">%3$s</label>
 				</li>',
-				esc_html__('Offload files to FTP storage', 'vital'),
-				esc_html__('Enable this option to offload uploaded files in this field to FTP storage. Local copies of files will be deleted after successful transfer', 'vital'),
-				esc_html__('Enable', 'vital')
+				esc_html__('Offload files to FTP storage', 'incon'),
+				esc_html__('Enable this option to offload uploaded files in this field to FTP storage. Local copies of files will be deleted after successful transfer', 'incon'),
+				esc_html__('Enable', 'incon')
 			);
 		}
 	}
@@ -304,8 +304,11 @@ class GF_Offload_File_Uploads extends GFAddOn {
 		$s3->putBucket($this->s3bucketname, $this->s3filepermissions);
 
 		foreach ($files as $key => $file) {
+			$hash = substr(md5(openssl_random_pseudo_bytes(20)),-5)."_";
 			$file_info = $this->get_file_info($file);
-			$file_name = $file_info['name'];
+
+			// Adding date and random hash to ensure unique file names when uploading.
+			$file_name = date("YmdHis")."_".$hash . $file_info['name'];
 
 			if ($this->s3bucketpath) {
 				$file_name = trailingslashit($this->s3bucketpath) . $file_name;
@@ -331,6 +334,48 @@ class GF_Offload_File_Uploads extends GFAddOn {
 		}
 
 		return $remote_files;
+	}
+
+
+	/**
+	 * Delete file on Amazon S3 with entry deletion.
+	 *
+	 * @since 1.0.0
+	 * @param  array $file File URLs to delete.
+	 * @return nothing.
+	 */
+	public function delete_files_s3($delete_file_url) {
+		
+		$file_parts = explode("/",$delete_file_url);
+		if (count($file_parts) > 0) {
+			$domain_replace = array(
+		    		'http://'.$this->s3bucketname.'.s3.amazonaws.com/', 
+		    		'https://'.$this->s3bucketname.'.s3.amazonaws.com/');
+			//checking to make sure the bucket is the same before attempting deletion.
+			if ($file_parts[2] == $this->s3bucketname.'.s3.amazonaws.com') {
+				$s3 = new S3($this->awsaccesskey, $this->awssecretkey);
+				$delete_file = $file_parts[3] . "/" . $file_parts[4];
+				$s3->deleteObject($this->s3bucketname, $delete_file);
+			}
+		}
+	}
+
+
+	/**
+	 * Get file to Amazon S3.
+	 *
+	 * @since 1.0.0
+	 * @param  array $files File URLs to upload.
+	 * @return array Remote file URLs.
+	 */
+	public function get_files_s3($file_name) {
+		// $s3 = new S3($this->awsaccesskey, $this->awssecretkey);
+		// $s3->putBucket($this->s3bucketname, $this->s3filepermissions);
+		$remote_files = [];
+		$s3 = new S3($this->awsaccesskey, $this->awssecretkey);
+
+		$file = $s3->getObject($this->s3bucketname, $file_name);
+		return $file;
 	}
 
 	/**
